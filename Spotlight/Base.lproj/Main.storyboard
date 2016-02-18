@@ -21,13 +21,13 @@
                                 <rect key="frame" x="-1" y="0.0" width="321" height="568"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flashlight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aN-T9-ffm">
-                                <rect key="frame" x="77" y="141" width="166" height="65"/>
+                                <rect key="frame" x="76" y="141" width="166" height="65"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="37"/>
                                 <color key="textColor" red="0.09962582272014861" green="0.4929565684610272" blue="0.83277243589743588" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHe-QP-CBd">
-                                <rect key="frame" x="0.0" y="214" width="320" height="168"/>
+                                <rect key="frame" x="-1" y="214" width="320" height="168"/>
                                 <rect key="contentStretch" x="0.25" y="0.20000000000000001" width="1" height="0.75"/>
                                 <state key="normal" backgroundImage="flashlight3"/>
                                 <connections>
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ccy-o7-8fq">
-                                <rect key="frame" x="101" y="404" width="118" height="31"/>
+                                <rect key="frame" x="100" y="403" width="118" height="31"/>
                                 <connections>
                                     <action selector="setFlashIntensity:" destination="BYZ-38-t0r" eventType="valueChanged" id="W2H-N0-8bw"/>
                                 </connections>
