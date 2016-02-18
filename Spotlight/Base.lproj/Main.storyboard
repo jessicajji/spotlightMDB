@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,16 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-gN-h0b">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white" translatesAutoresizingMaskIntoConstraints="NO" id="0G3-gN-h0b">
                                 <rect key="frame" x="-1" y="0.0" width="321" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flashlight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aN-T9-ffm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flashlight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aN-T9-ffm">
                                 <rect key="frame" x="76" y="141" width="166" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="vnB-N5-A2A"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="37"/>
                                 <color key="textColor" red="0.09962582272014861" green="0.4929565684610272" blue="0.83277243589743588" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHe-QP-CBd">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHe-QP-CBd">
                                 <rect key="frame" x="-1" y="214" width="320" height="168"/>
                                 <rect key="contentStretch" x="0.25" y="0.20000000000000001" width="1" height="0.75"/>
                                 <state key="normal" backgroundImage="flashlight3"/>
@@ -34,14 +38,33 @@
                                     <action selector="toggleFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="scz-ei-AaA"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ccy-o7-8fq">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ccy-o7-8fq">
                                 <rect key="frame" x="100" y="403" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WvX-mf-lcW"/>
+                                </constraints>
                                 <connections>
                                     <action selector="setFlashIntensity:" destination="BYZ-38-t0r" eventType="valueChanged" id="W2H-N0-8bw"/>
                                 </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7aN-T9-ffm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="121" id="3qH-tq-GfY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ccy-o7-8fq" secondAttribute="bottom" constant="135" id="58C-1O-EtH"/>
+                            <constraint firstItem="ccy-o7-8fq" firstAttribute="centerX" secondItem="uHe-QP-CBd" secondAttribute="centerX" id="60l-uE-Iby"/>
+                            <constraint firstItem="7aN-T9-ffm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="Ixa-2r-DZC"/>
+                            <constraint firstItem="uHe-QP-CBd" firstAttribute="top" secondItem="7aN-T9-ffm" secondAttribute="bottom" constant="8" symbolic="YES" id="JZb-qF-eiH"/>
+                            <constraint firstItem="ccy-o7-8fq" firstAttribute="centerX" secondItem="0G3-gN-h0b" secondAttribute="centerX" id="S3H-yk-fX9"/>
+                            <constraint firstItem="0G3-gN-h0b" firstAttribute="leading" secondItem="uHe-QP-CBd" secondAttribute="leading" id="SLz-pl-vLt"/>
+                            <constraint firstItem="0G3-gN-h0b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YJi-IP-Itm"/>
+                            <constraint firstItem="uHe-QP-CBd" firstAttribute="centerX" secondItem="7aN-T9-ffm" secondAttribute="centerX" id="ZbZ-eR-jGr"/>
+                            <constraint firstItem="ccy-o7-8fq" firstAttribute="top" secondItem="uHe-QP-CBd" secondAttribute="bottom" constant="21" id="hz4-2j-UXq"/>
+                            <constraint firstItem="0G3-gN-h0b" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ra5-Za-1Og"/>
+                            <constraint firstAttribute="trailing" secondItem="0G3-gN-h0b" secondAttribute="trailing" id="umt-fc-jqy"/>
+                            <constraint firstItem="0G3-gN-h0b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y4f-0i-si0"/>
+                            <constraint firstItem="ccy-o7-8fq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="86" id="yP7-tI-hRc"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
