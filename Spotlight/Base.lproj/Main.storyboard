@@ -27,13 +27,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHe-QP-CBd">
-                                <rect key="frame" x="0.0" y="269" width="320" height="168"/>
+                                <rect key="frame" x="0.0" y="214" width="320" height="168"/>
                                 <rect key="contentStretch" x="0.25" y="0.20000000000000001" width="1" height="0.75"/>
                                 <state key="normal" backgroundImage="flashlight3"/>
                                 <connections>
-                                    <action selector="toggleFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UtR-xj-1yv"/>
+                                    <action selector="toggleFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="scz-ei-AaA"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ccy-o7-8fq">
+                                <rect key="frame" x="101" y="404" width="118" height="31"/>
+                                <connections>
+                                    <action selector="setFlashIntensity:" destination="BYZ-38-t0r" eventType="valueChanged" id="W2H-N0-8bw"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

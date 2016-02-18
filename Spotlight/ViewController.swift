@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     }
     
     
+    
     @IBAction func toggleFlash(sender: AnyObject) {
         let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         if (device.hasTorch) {
@@ -44,6 +45,31 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func setFlashIntensity(sender: UISlider) {
+        let inputValue = Float(sender.value)
+        let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        if (device.hasTorch) {
+            do {
+                try device.lockForConfiguration()
+                if (device.torchMode == AVCaptureTorchMode.On) {
+                    do {
+                        try device.setTorchModeOnWithLevel(inputValue)
+                    } catch {
+                        print(error)
+                    }
+                }
+                device.unlockForConfiguration()
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    
+    
+    
+    
 
 }
 
